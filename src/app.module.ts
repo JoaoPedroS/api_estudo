@@ -1,7 +1,5 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DocumentBuilder } from '@nestjs/swagger';
-import { SwaggerModule } from '@nestjs/swagger/dist';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppointmentsModule } from './v1/appointments/appointments.module';
 import { Appointment } from './v1/appointments/entities/appointment.entity';

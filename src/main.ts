@@ -13,7 +13,7 @@ async function bootstrap() {
     .setTitle('API agendamento')
     .setDescription('API para cadastrar agendamentos')
     .setVersion('1.0')
-    .build();
+    .build();  
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
 
