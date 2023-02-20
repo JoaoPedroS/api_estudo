@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { AppointmentApiTag } from 'src/decorators/api.agendamento.swagger.decorator';
+import { ApiAppointmentSwagger } from 'src/decorators/api.agendamento.swagger.decorator';
 import { AppointmentsService } from './appointments.service';
 import { CreateAppointmentDto } from './dto/create-appointment.dto';
 import { UpdateAppointmentDto } from './dto/update-appointment.dto';
@@ -9,7 +9,7 @@ import { UpdateAppointmentDto } from './dto/update-appointment.dto';
   path: 'appointments',
   version: '1'
 })
-@AppointmentApiTag('appointments')
+@ApiAppointmentSwagger('appointments')
 export class AppointmentsController {
   constructor(private readonly appointmentsService: AppointmentsService) {}
 

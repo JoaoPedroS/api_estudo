@@ -2,14 +2,14 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { PatientService } from './patient.service';
 import { CreatePatientDto } from './dto/create-patient.dto';
 import { UpdatePatientDto } from './dto/update-patient.dto';
-import { AppointmentApiTag } from 'src/decorators/api.agendamento.swagger.decorator';
+import { ApiAppointmentSwagger } from 'src/decorators/api.agendamento.swagger.decorator';
 
 
 @Controller({
   path: 'patient',
   version: '1'
 })
-@AppointmentApiTag('patients')
+@ApiAppointmentSwagger('patients')
 export class PatientController {
   constructor(private readonly patientService: PatientService) {}
 

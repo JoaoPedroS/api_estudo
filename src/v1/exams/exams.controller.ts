@@ -2,14 +2,14 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { ExamsService } from './exams.service';
 import { CreateExamDto } from './dto/create-exam.dto';
 import { UpdateExamDto } from './dto/update-exam.dto';
-import { AppointmentApiTag } from 'src/decorators/api.agendamento.swagger.decorator';
+import { ApiAppointmentSwagger } from 'src/decorators/api.agendamento.swagger.decorator';
 
 
 @Controller({
   path: 'exams',
   version: '1'
 })
-@AppointmentApiTag('exam')
+@ApiAppointmentSwagger('exam')
 export class ExamsController {
   constructor(private readonly examsService: ExamsService) {}
 

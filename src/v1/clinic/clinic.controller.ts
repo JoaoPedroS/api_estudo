@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { AppointmentApiTag } from 'src/decorators/api.agendamento.swagger.decorator';
+import { ApiAppointmentSwagger } from 'src/decorators/api.agendamento.swagger.decorator';
 import { ClinicService } from './clinic.service';
 import { CreateClinicDto } from './dto/create-clinic.dto';
 import { UpdateClinicDto } from './dto/update-clinic.dto';
@@ -9,7 +9,7 @@ import { UpdateClinicDto } from './dto/update-clinic.dto';
   path: 'clinic',
   version: '1'
 })
-@AppointmentApiTag('clinics')
+@ApiAppointmentSwagger('clinics')
 export class ClinicController {
   constructor(private readonly clinicService: ClinicService) {}
 
