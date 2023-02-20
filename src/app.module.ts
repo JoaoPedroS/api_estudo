@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppService } from './app.service';
 import { AppointmentsModule } from './v1/appointments/appointments.module';
 import { Appointment } from './v1/appointments/entities/appointment.entity';
 import { ClinicModule } from './v1/clinic/clinic.module';
@@ -37,7 +36,6 @@ import { PatientModule } from './v1/patient/patient.module';
     ClinicModule,
     AppointmentsModule,
     PatientModule
-  ],
-  providers: [AppService],
+  ]
 })
 export class AppModule {}
